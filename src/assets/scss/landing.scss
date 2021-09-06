@@ -1,0 +1,71 @@
+.container {
+  display: flex; 
+  flex-direction: row; 
+  height: 100%; 
+  width: 100%;
+}
+
+.spaceForNothing {
+  width: 20%;
+  height: 100%;
+}
+
+.imageContainer {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.landingImage {
+  background-image: url("../svg/Castle.svg");
+  width: 100%;
+  height: 100%;
+  max-width: 100;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding-top: 0px;
+  display: inline-block;
+}
+
+.inviteContainer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  position: absolute;
+  left: 10%;
+  top: 35%;
+}
+
+.startButton {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.startButtonDecoration {
+  height: 70%;
+  width: 50%;
+  border-radius: 999px;
+  background: radial-gradient(100% 1836.73% at 0% 0%, #F97471 0%, #FF7D7D 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scalableTextH {
+  font-size: clamp(1.5rem, 0.971830985915493rem + 1.6901408450704223vw, 3rem);
+  font-style: normal;
+  font-weight: bolder;
+  margin-bottom: 0%;
+}
+
+.scalableTextD {
+  font-size: clamp(1rem, 0.647887323943662rem + 1.1267605633802817vw, 2rem);
+  margin-bottom: 2%;
+}
+
+.scalableTextB {
+  font-size: clamp(1rem, 0.823943661971831rem + 0.5633802816901409vw, 1.5rem)
+}

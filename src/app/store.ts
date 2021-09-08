@@ -1,9 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { testCompSlice }  from "../components/testComp/testCompSlice"
 
 export const store = configureStore({
   reducer: {
-    testComp: testCompSlice.reducer
   },
 })
 

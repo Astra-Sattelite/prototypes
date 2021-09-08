@@ -14,7 +14,8 @@ body {
 html, body {
   height: 100%;
   margin: 0;
-  background-color: #FFF3CB;
+  /* background: rgb(250,248,246); */
+  
 }
 
 html, body > div {

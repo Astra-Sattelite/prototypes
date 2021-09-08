@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Gargoyle";
+  src: url("../../fonts/aveMaria/gargoyles_normal/Gargoyles.ttf");
+}
+
+.container {
+  display: flex; 
+  flex-direction: row; 
+  height: 100%; 
+  width: 100%;
+}
+
+.invitation {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  font-family: Gargoyle;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.imageContainer {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.imageContainer:last-child {
+  transform: scaleX(-1);
+  background-position: left;
+}
+
+.landingImage {
+  background-image: url("../../svg/aveMaria/Knight.svg");
+  width: 100%;
+  height: 100%;
+  max-width: 100;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-top: 0px;
+  display: inline-block;
+}
+
+.startButton {
+  margin-top: 8%;
+  font-size: 3rem;
+  height: 20%;
+  width: 40%;
+  border-radius: 999px;
+  border: 1px solid;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.startButton:hover {
+  color: red;
+  background-color: black;
+}

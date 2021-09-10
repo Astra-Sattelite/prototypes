@@ -1,4 +1,4 @@
-.containerH {
+.containerHNihongo {
   width: 100%;
   height: 25%;
   display: flex;
@@ -6,23 +6,23 @@
   align-items: center;
 }
 
-.logo {
+.logoNihongo {
   height: 100%; 
   margin-left: 10%; 
   width: 10%;
 }
 
-.scalableText {
+.scalableTextNihongo {
   display: flex;
   align-items: center;
   color: black;
-  font-size: clamp(1rem, -0.028169014084507005rem + 1.6901408450704223vw, 2rem);
+  font-size: clamp(1.5rem, -0.028169014084507005rem + 1.6901408450704223vw, 2.5rem);
   height: 100%;
   margin-left: 5%;
   font-weight: 700;
 }
 
-.acc {
+.accNihongo {
   height: 100%; 
   margin-left: 10%; 
   width: 10%;

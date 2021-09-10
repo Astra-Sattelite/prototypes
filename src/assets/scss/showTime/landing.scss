@@ -1,0 +1,26 @@
+.contentContainerShowTime {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.contentShowTime {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 70%;
+  min-height: 100%;
+  padding-bottom: 0px;
+  background-color: antiquewhite;
+}
+
+.cardShowTime {
+  width: 30%;
+  height: 20%;
+  max-height: 20%;
+  border: 1px solid;
+  margin: 5%;
+  padding-bottom: 5%;
+}

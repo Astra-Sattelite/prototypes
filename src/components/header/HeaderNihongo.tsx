@@ -1,6 +1,6 @@
-import '../../assets/scss/header.scss'
+import '../../assets/scss/nihongo/header.scss'
 import * as UI from "@material-ui/core"
-import logo from '../../assets/svg/Logo.svg'
+import logo from '../../assets/svg/nihongo/Logo.svg'
 
 import React from 'react'
 
@@ -9,11 +9,11 @@ import {
 } from "react-router-dom"
 
 
-export const Header: React.FC = () => {
+export const HeaderNihongo: React.FC = () => {
 
   return (
     <>
-      <div className="containerH">
+      <div className="containerHNihongo">
         <Logo />
         <LinksRow />
         <div>
@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
 
 const Logo: React.FC = () => {
   return (
-    <img src={logo} alt={"Logo.svg"} className="logo" />
+    <img src={logo} alt={"Logo.svg"} className="logoNihongo" />
   )
 }
 
@@ -36,13 +36,13 @@ const LinksRow: React.FC = () => {
 
   return (
     <div style={{height: "100%", width: "60%", display: "flex", flexDirection: "row"}}>
-      <Link className="scalableText" to="/">
+      <Link className="scalableTextNihongo" to="/">
         Контакты
       </Link>
-      <Link className="scalableText" to="/">
+      <Link className="scalableTextNihongo" to="/">
         Личный урок
       </Link>
-      <Link className="scalableText" to="/">
+      <Link className="scalableTextNihongo" to="/">
         Помощь проекту
       </Link>
     </div>

@@ -1,14 +1,14 @@
-import '../../assets/scss/landing.scss'
+import '../../assets/scss/nihongo/landing.scss'
 
 export const Nihongo: React.FC = () => {
 
   return (
-    <div className="containerNihon">
-      <div className="spaceForNothingNihon">
+    <div className="containerNihongo">
+      <div className="spaceForNothingNihongo">
       </div>
       <Invitation />
-      <div className="imageContainerNihon" >
-        <div className="landingImageNihon" />
+      <div className="imageContainerNihongo" >
+        <div className="landingImageNihongo" />
       </div>
     </div>
   )
@@ -17,18 +17,18 @@ export const Nihongo: React.FC = () => {
 const Invitation: React.FC = () => {
   return (
     <>
-      <div className="inviteContainerNihon">
-        <p className="scalableTextHNihon">
+      <div className="inviteContainerNihongo">
+        <p className="scalableTextHNihongo">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce u
         </p>
 
-        <p className="scalableTextDNihon">
+        <p className="scalableTextDNihongo">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut ex odio. Aliquam lobortis quam vitae mauris auctor, a malesuada urna lu
         </p>
 
-        <div className="startButtonNihon">
-          <div className="startButtonDecorationNihon">
-            <p className="scalableTextBNihon">Начать обучение</p>
+        <div className="startButtonNihongo">
+          <div className="startButtonDecorationNihongo">
+            <p className="scalableTextBNihongo">Начать обучение</p>
           </div>
         </div>
       </div>

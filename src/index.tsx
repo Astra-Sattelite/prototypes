@@ -5,13 +5,19 @@ import { Provider } from 'react-redux'
 import { store } from './app/store'
 import "./assets/css/normalize.css"
 import "./assets/css/root.css"
+import {
+  BrowserRouter as Router
+} from "react-router-dom"
+
 
 const root = document.getElementById('root')
 
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </React.StrictMode>
   </Provider>,
   root

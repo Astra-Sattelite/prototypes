@@ -1,6 +1,9 @@
 import "../../assets/scss/showTime/landing.scss"
 import { v4 as uuidv4 } from "uuid"
 import knight from "../../assets/svg/aveMaria/Knight.svg"
+// import castle from "../../assets/svg/nihongo/Castle.svg"
+import logo from "../../assets/svg/nihongo/Logo.svg"
+import CSS from 'csstype'
 
 import {
   Link
@@ -16,9 +19,8 @@ interface Info
 export const ShowTime = () => {
 
   const infoHash: Info[] = 
-    [ {img: knight, descr: "dasdasdasd", link: "/ave", id: uuidv4()}
-    , {img: "ng", descr: "dasdasdasd", link: "/ng", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
+    [ {img: ("url(" + knight + ")"), descr: 'We will take Jerusalem DEUS WULT! DEUS WULT! DEUS WULT!', link: "/ave", id: uuidv4()}
+    , {img: ("url(" + logo + ")"), descr: "Site for learning Japanese", link: "/ng", id: uuidv4()}
     , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
     , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
     , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
@@ -39,9 +41,38 @@ export const ShowTime = () => {
 
 const CardShowTime = (info: Info) => {
 
+  const cardButtonLinkShowTime: CSS.Properties = {
+    width: "90%", 
+    height: "20%", 
+    alignSelf: "center", 
+    textDecoration: "none", 
+    color: "black"
+  }
+
+  const imageShowTime = (): CSS.Properties => {
+    return {
+      height: "100%",
+      width: "100%",
+      backgroundImage: info.img,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      borderBottom: "1px solid black"
+    }
+  }
+
   return (
-    <Link to={info.link} className="cardShowTime">
-      <img src={window.location.origin + info.img} alt={window.location.origin + info.img}/>
-    </Link>
+    <div className="cardShowTime" key={info.id}>
+      <Link to={info.link} style={{width: "100%", height: "30%"}}>
+        <div style={imageShowTime()} />
+      </Link>
+      <div className="cardDescrShowTime">
+        {info.descr}
+      </div>
+      <Link to={info.link} style={cardButtonLinkShowTime}>
+        <div className="cardButtonShowTime">
+          Open
+        </div>
+      </Link>
+    </div>
   )
 }

@@ -8,14 +8,14 @@ interface Info
   , id: string
   }
 
-export const HeaderShowTime = () => {
+export const HeaderShowTime: React.FC = () => {
 
-  const infoHash: Info[] = 
+  const infoHash: Info[] =
     [ {text: "Root", link: "/", id: uuidv4()}
     , {text: "Nihongo Gaijin", link: "/ng", id: uuidv4()}
     , {text: "Ave Maria", link: "/ave", id: uuidv4()}
     ]
-    
+
   return (
     <div className="containerHShowTime">
       {infoHash.map(info => HeaderButton(info))}
@@ -23,9 +23,9 @@ export const HeaderShowTime = () => {
   )
 }
 
-const HeaderButton = (info: Info) => {
+const HeaderButton = (info: Info): JSX.Element => {
   return (
-    <Link to={info.link} key={info.id} className="linkShowTime">
+    <Link to={info.link} key={info.id} className="linkShowTime" style={{color: "black"}}>
       {info.text}
     </Link>
   )

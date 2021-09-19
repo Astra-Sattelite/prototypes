@@ -1,3 +1,7 @@
+# Screenshots
+Site for learning japanese 
+
+
 # Core Tech
 
 Typescript\

@@ -1,8 +1,11 @@
 import "../../assets/scss/showTime/landing.scss"
 import { v4 as uuidv4 } from "uuid"
+
 import knight from "../../assets/svg/aveMaria/Knight.svg"
-// import castle from "../../assets/svg/nihongo/Castle.svg"
 import logo from "../../assets/svg/nihongo/Logo.svg"
+
+import { HeaderShowTime } from '../header/HeaderShowTime'
+
 import CSS from 'csstype'
 
 import {
@@ -31,9 +34,12 @@ export const ShowTime = () => {
     ]
 
   return (
-    <div className="contentContainerShowTime">
-      <div className="contentShowTime">
-        {infoHash.map(info => CardShowTime(info))}
+    <div className="rootShowTime">
+      <HeaderShowTime />
+      <div className="contentContainerShowTime">
+        <div className="contentShowTime">
+          {infoHash.map(info => CardShowTime(info))}
+        </div>
       </div>
     </div>
   )

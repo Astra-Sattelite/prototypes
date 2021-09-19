@@ -16,11 +16,11 @@ export const HeaderNihongo: React.FC = () => {
       <div className="containerHNihongo">
         <Logo />
         <LinksRow />
-        <div>
-          <UI.Button variant="outlined" className="acc">
-            dsdasd
-          </UI.Button>
-        </div>
+        
+        <UI.Button variant="outlined" className="accNihongo">
+          имя_пользователя
+        </UI.Button>
+        
       </div>
     </>
   )

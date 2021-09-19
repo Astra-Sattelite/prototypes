@@ -4,7 +4,6 @@ import { Nihongo } from './components/landing/Nihongo'
 import { HeaderAve } from './components/header/HeaderAve'
 import { AveMaria } from './components/landing/AveMaria'
 
-import { HeaderShowTime } from './components/header/HeaderShowTime'
 import { ShowTime } from './components/landing/ShowTime'
 
 // import { HeaderCandy } from './components/header/HeaderCandy'
@@ -27,8 +26,8 @@ const App: React.FC = () => {
 
   const sw = (param: any): string => {
     switch(param) {
-      case host:
-        return "#fff"
+      case "/":
+        return "radial-gradient(circle at 1.98% 74.02%,#E55D87,transparent 100%),radial-gradient(circle at 98.02% 35.97%,#5FC3E4,transparent 100%),radial-gradient(circle at 50% 50%,#0cc285,#0cc285 100%)"
       
       case ("/ave"):
         return "radial-gradient(circle, rgba(250,248,246,1) 0%, rgba(204,204,202,1) 50%, rgba(34,35,30,1) 100%)"
@@ -37,7 +36,7 @@ const App: React.FC = () => {
         return "#FFF3CB"
 
       default:
-        return "#fff"
+        return host
     }
   }
 
@@ -47,7 +46,8 @@ const App: React.FC = () => {
     height: "100%",
     minWidth: "500px",
     minHeight: "500px",
-    background: sw(location.pathname)
+    background: sw(location.pathname),
+    paddingBottom: "0px"
   }
 
   return (
@@ -55,7 +55,6 @@ const App: React.FC = () => {
     <div style={rootContainer}>
       <Switch>
         <Route exact path="/">
-          <HeaderShowTime />
           <ShowTime />
         </Route>
 

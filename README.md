@@ -15,7 +15,6 @@ Refactor all .scss\
 \
 Update all prototypes to 3-page app\
 0%/100%\
-\
 
 # Core Tech
 

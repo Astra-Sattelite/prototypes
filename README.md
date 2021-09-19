@@ -5,6 +5,18 @@ Prototype: JP-learning ste
 Prototype: Crusade recruiting
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/ave.png?raw=true)
 
+# TODO
+
+Refactor site architecture\ 
+30%/100%\
+\
+Refactor all .scss\        
+0%/100%\
+\
+Update all prototypes to 3-page app\ 
+0%/100%\
+\ 
+
 # Core Tech
 
 Typescript\

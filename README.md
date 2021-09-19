@@ -7,15 +7,15 @@ Prototype: Crusade recruiting
 
 # TODO
 
-Refactor site architecture\ 
+Refactor site architecture\
 30%/100%\
 \
-Refactor all .scss\        
+Refactor all .scss\
 0%/100%\
 \
-Update all prototypes to 3-page app\ 
+Update all prototypes to 3-page app\
 0%/100%\
-\ 
+\
 
 # Core Tech
 

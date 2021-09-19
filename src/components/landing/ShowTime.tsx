@@ -36,10 +36,8 @@ export const ShowTime = () => {
   return (
     <div className="rootShowTime">
       <HeaderShowTime />
-      <div className="contentContainerShowTime">
-        <div className="contentShowTime">
+      <div className="cardsShowTime">
           {infoHash.map(info => CardShowTime(info))}
-        </div>
       </div>
     </div>
   )
@@ -50,7 +48,7 @@ const CardShowTime = (info: Info) => {
   const cardButtonLinkShowTime: CSS.Properties = {
     width: "90%", 
     height: "20%", 
-    alignSelf: "center", 
+    alignSelf: "center",
     textDecoration: "none", 
     color: "black"
   }

@@ -1,14 +1,18 @@
 import '../../assets/scss/nihongo/landing.scss'
+import { HeaderNihongo } from '../header/HeaderNihongo'
 
 export const Nihongo: React.FC = () => {
 
   return (
-    <div className="containerNihongo">
-      <div className="spaceForNothingNihongo">
-      </div>
-      <Invitation />
-      <div className="imageContainerNihongo" >
-        <div className="landingImageNihongo" />
+    <div className="rootNihongo">
+      <HeaderNihongo />
+      <div className="containerNihongo">
+        <div className="spaceForNothingNihongo">
+        </div>
+        <Invitation />
+        <div className="imageContainerNihongo" >
+          <div className="landingImageNihongo" />
+        </div>
       </div>
     </div>
   )

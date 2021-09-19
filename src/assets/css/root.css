@@ -18,11 +18,13 @@ html, body {
   
 }
 
-html, body > div {
+body > div {
   height: 100%;
+  min-height: 500px;
+  min-width: 500px;
   margin: 0;
 }
 
 label, p {
-  min-height: 0vw
+  min-height: 0vw;
 }

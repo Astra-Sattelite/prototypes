@@ -1,6 +1,9 @@
 # Screenshots
-Site for learning japanese 
+Prototype: JP-learning ste 
+![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/nihongo.png?raw=true)
 
+Prototype: Crusade recruiting
+![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/ave.png?raw=true)
 
 # Core Tech
 

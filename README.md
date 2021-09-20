@@ -1,5 +1,5 @@
 # Screenshots
-Prototype: JP-learning ste 
+Prototype: JP-learning site 
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/nihongo.png?raw=true)
 
 Prototype: Crusade recruiting
@@ -8,10 +8,10 @@ Prototype: Crusade recruiting
 # TODO
 
 Refactor site architecture\
-30%/100%\
+40%/100%\
 \
 Refactor all .scss\
-0%/100%\
+20%/100%\
 \
 Update all prototypes to 3-page app\
 0%/100%

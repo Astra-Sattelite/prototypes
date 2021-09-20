@@ -3,29 +3,18 @@
   src: url("../../fonts/aveMaria/gargoyles_normal/Gargoyles.ttf");
 }
 
-.containerHAve {
+.flexContainerHeaderAve {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
   width: 100%;
   height: 25%;
 }
 
-.logoAve {
-  height: 100%; 
-  margin-left: 10%; 
-  width: 10%;
-}
-
-.textAve {
+.textHeaderAve {
   font-family: Gargoyle;
-  display: flex;
-  align-items: center;
+  align-self: center;
   color: black;
   font-size: 6rem;
-  height: 100%;
   font-weight: 700;
-}
-
-.accAve {
-  height: 100%; 
-  margin-left: 10%; 
-  width: 10%;
 }

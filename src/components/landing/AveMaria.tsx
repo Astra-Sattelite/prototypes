@@ -5,7 +5,7 @@ export const AveMaria: React.FC = () => {
 
   return (
     <div className="rootAve">
-      <HeaderAve /> 
+      <HeaderAve />  
       <div className="flexContainerLandingAve">
 
         <div className="landingImageAve" />

@@ -1,26 +1,32 @@
 import '../../assets/scss/nihongo/header.scss'
-import * as UI from "@material-ui/core"
 import logo from '../../assets/svg/nihongo/Logo.svg'
+import { v4 as uuidv4 } from "uuid"
 
 import React from 'react'
+import { Link } from "react-router-dom"
 
-import { 
-  Link
-} from "react-router-dom"
+interface HeaderInfo 
+  { text: string
+  , link: string
+  }
 
 
 export const HeaderNihongo: React.FC = () => {
 
+  const headerHash: HeaderInfo[] = 
+  [ {text: "Контакты", link: "/"}
+  , {text: "Личный урок", link: "/"}
+  , {text: "Помощь проекту", link: "/"}
+  ]
+
   return (
     <>
-      <div className="containerHNihongo">
+      <div className="flexContainerHeaderNihongo">
         <Logo />
-        <LinksRow />
-        
-        <UI.Button variant="outlined" className="accNihongo">
-          имя_пользователя
-        </UI.Button>
-        
+        {Links(headerHash)}
+        <div className="accHeaderNihongo">
+          <p>имя_пользователя</p>
+        </div>
       </div>
     </>
   )
@@ -28,23 +34,20 @@ export const HeaderNihongo: React.FC = () => {
 
 const Logo: React.FC = () => {
   return (
-    <img src={logo} alt={"Logo.svg"} className="logoNihongo" />
+    <img src={logo} alt={"Logo.svg"} className="logoHeaderNihongo" />
   )
 }
 
-const LinksRow: React.FC = () => {
+const Links = (infos: HeaderInfo[]): JSX.Element => {
 
   return (
-    <div style={{height: "100%", width: "60%", display: "flex", flexDirection: "row"}}>
-      <Link className="scalableTextNihongo" to="/">
-        Контакты
-      </Link>
-      <Link className="scalableTextNihongo" to="/">
-        Личный урок
-      </Link>
-      <Link className="scalableTextNihongo" to="/">
-        Помощь проекту
-      </Link>
-    </div>
+    <>
+      {infos.map(
+        info =>
+          <Link key={uuidv4()} className="textHeaderNihongo" to={info.link}>
+            {info.text}
+          </Link>
+      )}
+    </>
   )
 }

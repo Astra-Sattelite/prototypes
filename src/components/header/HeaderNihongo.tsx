@@ -13,11 +13,11 @@ interface HeaderInfo
 
 export const HeaderNihongo: React.FC = () => {
 
-  const headerHash: HeaderInfo[] = 
-  [ {text: "Контакты", link: "/"}
-  , {text: "Личный урок", link: "/"}
-  , {text: "Помощь проекту", link: "/"}
-  ]
+  const headerHash: HeaderInfo[] =
+    [ {text: "Контакты", link: "/"}
+    , {text: "Личный урок", link: "/"}
+    , {text: "Помощь проекту", link: "/"}
+    ]
 
   return (
     <>

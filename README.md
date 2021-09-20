@@ -11,7 +11,7 @@ Refactor site architecture\
 40%/100%\
 \
 Refactor all .scss\
-20%/100%\
+60%/100%\
 \
 Update all prototypes to 3-page app\
 0%/100%

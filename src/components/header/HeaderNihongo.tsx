@@ -24,8 +24,8 @@ export const HeaderNihongo: React.FC = () => {
       <div className="flexContainerHeaderNihongo">
         <Logo />
         {Links(headerHash)}
-        <div className="accHeaderNihongo">
-          <p>имя_пользователя</p>
+        <div className="containerAccHeaderNihongo">
+          <p className="accHeaderNihongo">имя_пользователя</p>
         </div>
       </div>
     </>

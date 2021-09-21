@@ -7,7 +7,7 @@ export const Nihongo: React.FC = () => {
     <div className="rootNihongo">
       <HeaderNihongo />
       <div className="flexContainerNihongo">
-        <div className="spaceForNothingNihongo" />
+        <div className="containerEmptyNihongo" />
         <Invitation />
         <div className="landingImageNihongo" />
       </div>
@@ -18,7 +18,7 @@ export const Nihongo: React.FC = () => {
 const Invitation: React.FC = () => {
   return (
     <>
-      <div className="inviteContainerNihongo">
+      <div className="flexContainerInviteNihongo">
         <p className="textInvitationNihongo">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce u
         </p>

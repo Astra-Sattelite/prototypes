@@ -41,13 +41,13 @@ const Logo: React.FC = () => {
 const Links = (infos: HeaderInfo[]): JSX.Element => {
 
   return (
-    <>
+    <div className="flexContainerLinksHeaderNihongo">
       {infos.map(
         info =>
           <Link key={uuidv4()} className="textHeaderNihongo" to={info.link}>
             {info.text}
           </Link>
       )}
-    </>
+    </div>
   )
 }

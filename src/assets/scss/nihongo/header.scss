@@ -12,15 +12,21 @@
   width: 15%;
 }
 
+.flexContainerLinksHeaderNihongo {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 70%;
+}
+
 .textHeaderNihongo {
   display: flex;
   align-items: center;
   color: black;
   font-size: clamp(1.2rem, -0.028169014084507005rem + 1.6901408450704223vw, 2rem);
   height: 100%;
-  margin-left: 3%;
+  margin-left: 5%;
   font-weight: 700;
-  // width: 15%;
 }
 
 .containerAccHeaderNihongo {

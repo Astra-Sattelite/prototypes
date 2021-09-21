@@ -12,7 +12,7 @@ Prototype: Crusade recruiting
 /\
 /ng\
 /ave\
-/holo\
+/holo
 
 # TODO
 

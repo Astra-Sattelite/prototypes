@@ -2,8 +2,17 @@
 Prototype: JP-learning site 
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/nihongo.png?raw=true)
 
+Prototype: Store with hololive theme, not finished 70%\100%
+![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/holostore.png?raw=true)
+
 Prototype: Crusade recruiting
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/ave.png?raw=true)
+
+# Routes
+/\
+/ng\
+/ave\
+/holo\
 
 # TODO
 
@@ -11,7 +20,7 @@ Refactor site architecture\
 40%/100%\
 \
 Refactor all .scss\
-60%/100%\
+70%/100%\
 \
 Update all prototypes to 3-page app\
 0%/100%\

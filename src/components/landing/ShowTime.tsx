@@ -2,7 +2,8 @@ import "../../assets/scss/showTime/landing.scss"
 import { v4 as uuidv4 } from "uuid"
 
 import knight from "../../assets/svg/aveMaria/Knight.svg"
-import logo from "../../assets/svg/nihongo/Logo.svg"
+import logoNihongo from "../../assets/svg/nihongo/Logo.svg"
+import logoHolo from "../../assets/svg/holoStore/Logo.svg"
 
 import { HeaderShowTime } from '../header/HeaderShowTime'
 
@@ -23,8 +24,8 @@ export const ShowTime = () => {
 
   const infoHash: Info[] = 
     [ {img: ("url(" + knight + ")"), descr: 'We will take Jerusalem DEUS WULT! DEUS WULT! DEUS WULT!', link: "/ave", id: uuidv4()}
-    , {img: ("url(" + logo + ")"), descr: "Site for learning Japanese", link: "/ng", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
+    , {img: ("url(" + logoNihongo + ")"), descr: "Site for learning Japanese", link: "/ng", id: uuidv4()}
+    , {img: ("url(" + logoHolo + ")"), descr: "Store with hololive theme", link: "/holo", id: uuidv4()}
     , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
     , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
     , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}

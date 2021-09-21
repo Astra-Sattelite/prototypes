@@ -1,0 +1,37 @@
+.rootHoloStore {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #BFE7F9;
+}
+
+.flexContainerContentHoloStore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+  width: 100%;
+  background-color: #C1DCF5;
+}
+
+.containerEmptyHoloStore {
+  height: 15%;
+  width: 70%;
+}
+
+.flexContainerFiltersHoloStore {
+  display: flex;
+  flex-direction: row;
+  height: 15%;
+  width: 70%;
+  border: 1px solid black;
+}
+
+.flexContainerCardsHoloStore {
+  display: flex;
+  flex-direction: row;
+  height: 70%;
+  width: 70%;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}

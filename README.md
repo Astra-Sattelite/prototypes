@@ -4,7 +4,7 @@ Prototype: JP-learning site
 
 Prototype: Store with hololive theme, not finished 70%\100%
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/holostore.png?raw=true)
-
+ 
 Prototype: Crusade recruiting
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/ave.png?raw=true)
 

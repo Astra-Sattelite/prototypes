@@ -2,8 +2,8 @@
 Prototype: JP-learning site 
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/nihongo.png?raw=true)
 
-Prototype: Store with hololive theme, not finished 70%\100%
-![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/holostorev1.png?raw=true)
+Prototype: Store with hololive theme, not finished 80%\100%
+![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/holostorev2.png?raw=true)
 
 Prototype: Crusade recruiting
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/ave.png?raw=true)
@@ -20,12 +20,16 @@ Refactor site architecture\
 40%/100%\
 \
 Refactor all .scss\
-70%/100%\
+60%/100%\
 \
 Update all prototypes to 3-page app\
 0%/100%\
 \
-Move to CSS-modules
+Move to CSS-modules\
+0%/100%\
+\
+Move HoloStore from flexContainer to Grid\
+0%/100%
 
 # Core Tech
 

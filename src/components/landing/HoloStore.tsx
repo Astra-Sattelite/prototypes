@@ -38,7 +38,7 @@ export const HoloStore = () => {
     ]
     
   const cards: Card[] = 
-    [ {img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPiKMvOTUvjhGPmknx4qsVAZoH0EHC66X3iA&usqp=CAU", name: "War Crime", descr: "Is it war crime time?", price: 9.99, id: uuidv4()}
+    [ {img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPiKMvOTUvjhGPmknx4qsVAZoH0EHC66X3iA&usqp=CAU", name: "War Crime", descr: "Is it time alredy?", price: 9.99, id: uuidv4()}
     , {img: nakirium, name: "Nakirium", descr: "Side Effects: Deabetes", price: 14.99, id: uuidv4()}
     , {img: "https://i.ytimg.com/vi/7y5oyUbmv_8/maxresdefault.jpg", name: "Elite 3000", descr: "Lorem Ipsum Lorem Ipsum", price: 13.37, id: uuidv4()}
     , {img: worldBreaker, name: "World Breaker", descr: "Lorem Ipsum Lorem Ipsum", price: 6.66, id: uuidv4()}

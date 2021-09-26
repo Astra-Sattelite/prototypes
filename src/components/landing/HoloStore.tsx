@@ -79,7 +79,13 @@ const mkCard = (infoCard: Card): JSX.Element => {
       <img src={infoCard.img} alt={infoCard.img} className="cardImgHoloStore" />
       <div className="cardNameHoloStore">{infoCard.name}</div>
       <div className="cardDescrHoloStore">{infoCard.descr}</div>
-      <div className="cardPriceHoloStore">{infoCard.price + "$"}</div>
+      <div className="containerCardBuyHoloStore">
+        <div className="cardButtonHoloStore">
+          В корзину
+        </div>
+        <div className="cardPriceHoloStore">{infoCard.price + "$"}
+        </div>
+      </div>
     </div>
   )
 }

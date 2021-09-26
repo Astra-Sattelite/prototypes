@@ -12,7 +12,10 @@ export const HeaderHoloStore = () => {
       <div className="logoHeaderHoloStore" />
 
       <div className="flexContainerHeaderItemsHoloStore">
-        <div className="itemHeaderHoloStore">Lorem Ipsum</div>
+        <div className="itemHeaderHoloStore">
+          <div className="iconHeaderHoloStore" />
+          <div className="cartHeaderHoloStore">Cart</div>
+        </div>
         <div className="itemHeaderHoloStore">Lorem Ipsum</div>
         <div className="itemHeaderHoloStore">Lorem Ipsum</div>
       </div>

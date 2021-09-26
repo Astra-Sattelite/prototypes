@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #BFE7F9;
+  // background-color: #BFE7F9;
+  background-repeat: repeat;
+  background-image: url("../../svg/holoStore/bgFragment.svg");
 }
 
 .flexContainerContentHoloStore {
@@ -10,13 +12,14 @@
   flex-direction: column;
   align-items: center;
   align-self: center;
-  height: 70vh;
+  // height: 70vh;
+  height: 65%;
   width: 70%;
   background-color: #C1DCF5;
 }
 
 .containerEmptyHoloStore {
-  height: 20%;
+  height: 10%;
   width: 100%;
 }
 
@@ -62,13 +65,12 @@
 .flexContainerCardHoloStore {
   display: flex;
   flex-direction: column;
-  // justify-self: center;
-  // align-self: center;
   height: 250px;
   width: 200px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 1.8px solid #FFB859;
+  border-radius: 5px;
   margin: 15px;
+  background-color: #FFB859;
 }
 
 .cardImgHoloStore {
@@ -76,9 +78,8 @@
   height: 50%;
   object-fit: cover;
   object-position: center;
-  border-bottom: 1px solid black;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 5px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
@@ -90,27 +91,49 @@
   width: 100%;
   height: 10%;
   font-size: 2rem;
-  background-color: #FFB859;
+  font-weight: 600;
 }
 
 .cardDescrHoloStore {
   display: flex;
   justify-content: center;
   align-self: center;
+  align-items: center;
+  text-align: center;
   width: 80%;
   height: 25%;
-  font-size: 1.2rem;
+  // font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.containerCardBuyHoloStore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 20%;
+}
+
+.cardButtonHoloStore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 55%;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .cardPriceHoloStore {
   display: flex;
-  justify-content: flex-end;
-  align-self: center;
-  width: 90%;
-  height: 15%;
-  font-size: 1.5rem;
-}
-
-.cardBuyHoloStore {
-
+  justify-content: center;
+  font-weight: 900;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+  font-size: 1.4rem;
 }

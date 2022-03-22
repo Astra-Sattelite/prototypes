@@ -3,31 +3,28 @@ import { Nihongo } from './components/landing/Nihongo'
 import { AveMaria } from './components/landing/AveMaria'
 import { HoloStore } from './components/landing/HoloStore'
 
-import './assets/css/rootContainer.css'
+// import './assets/css/rootContainer.css'
 import * as React from "react"
-import { Switch, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
+import * as R from "ramda"
 
 
 const App: React.FC = () => {
 
+  const roots: [JSX.Element, string][] = [
+    [<ShowTime />, "/"],
+    [<HoloStore />, "/holo"],
+    [<AveMaria />, "/ave"],
+    [<Nihongo />, "/ng"]
+  ]
+
   return (
-    <Switch>
-      <Route exact path="/">
-        <ShowTime />
-      </Route>
-
-      <Route path="/holo">
-        <HoloStore />
-      </Route>
-
-      <Route path="/ave">
-        <AveMaria />
-      </Route>
-
-      <Route path="/ng">
-        <Nihongo />
-      </Route>
-    </Switch>
+    <Routes>
+      {R.map(([elem, path]) =>
+        <Route path={path} element={elem} />
+        , roots
+      )}
+    </Routes>
   )
 }
 

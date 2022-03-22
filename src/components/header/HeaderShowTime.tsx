@@ -15,6 +15,7 @@ export const HeaderShowTime: React.FC = () => {
     [ {text: "Root", link: "/", id: uuidv4()}
     , {text: "Nihongo Gaijin", link: "/ng", id: uuidv4()}
     , {text: "Ave Maria", link: "/ave", id: uuidv4()}
+    , {text: "Holo Store", link: "/holo", id: uuidv4()}
     ]
 
   return (

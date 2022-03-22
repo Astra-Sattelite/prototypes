@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../assets/scss/nihongo/landing.scss'
 import { HeaderNihongo } from '../header/HeaderNihongo'
 

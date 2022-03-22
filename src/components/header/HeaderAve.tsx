@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../assets/scss/aveMaria/header.scss'
 
 export const HeaderAve: React.FC = () => {

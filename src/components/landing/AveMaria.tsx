@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../assets/scss/aveMaria/landing.scss'
 import { HeaderAve } from "../header/HeaderAve"
 

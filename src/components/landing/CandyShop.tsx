@@ -1,3 +1,4 @@
+import React from 'react'
 import '../../assets/scss/aveMaria/landingAve.scss'
 
 export const CandyShop: React.FC = () => {

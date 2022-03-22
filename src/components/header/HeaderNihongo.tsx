@@ -1,8 +1,7 @@
+import React from 'react'
 import '../../assets/scss/nihongo/header.scss'
 import logo from '../../assets/svg/nihongo/Logo.svg'
 import { v4 as uuidv4 } from "uuid"
-
-import React from 'react'
 import { Link } from "react-router-dom"
 
 interface HeaderInfo 

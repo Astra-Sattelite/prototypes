@@ -1,3 +1,5 @@
+import React from 'react'
+
 import "../../assets/scss/holoStore/header.scss"
 
 export const HeaderHoloStore = () => {

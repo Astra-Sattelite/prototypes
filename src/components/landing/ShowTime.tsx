@@ -1,3 +1,4 @@
+import React from 'react'
 import "../../assets/scss/showTime/landing.scss"
 import { v4 as uuidv4 } from "uuid"
 
@@ -67,7 +68,7 @@ const CardShowTime = (info: Info) => {
 
   return (
     <div className="cardShowTime" key={info.id}>
-      <Link to={info.link} style={{width: "100%", height: "30%"}}>
+      {/* <Link to={info.link} style={{width: "100%", height: "30%"}}>
         <div style={imageShowTime()} />
       </Link>
       <div className="cardDescrShowTime">
@@ -77,7 +78,7 @@ const CardShowTime = (info: Info) => {
         <div className="cardButtonShowTime">
           Open
         </div>
-      </Link>
+      </Link> */}
     </div>
   )
 }

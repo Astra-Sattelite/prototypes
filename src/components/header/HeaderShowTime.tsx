@@ -1,8 +1,9 @@
+import React from 'react'
 import '../../assets/scss/showTime/header.scss'
 import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from "uuid"
 
-interface Info 
+interface Info
   { text: string
   , link: string
   , id: string

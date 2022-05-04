@@ -1,9 +1,11 @@
 import React from 'react'
 import "../../assets/scss/holoStore/landing.scss"
+import * as R from "ramda"
 import { HeaderHoloStore } from "../headers/HeaderHoloStore"
 import { v4 as uuidv4 } from "uuid"
 import nakirium from "../../assets/svg/holoStore/nakirium.jpeg"
 import worldBreaker from "../../assets/svg/holoStore/worldBreaker.jpeg"
+import { useIsMobile } from '../../../utils';
 
 interface Filter
   { text: string
@@ -43,22 +45,21 @@ export const HoloStore = () => {
     , {img: nakirium, name: "Nakirium", descr: "Side Effects: Deabetes", price: 14.99, id: uuidv4()}
     , {img: "https://i.ytimg.com/vi/7y5oyUbmv_8/maxresdefault.jpg", name: "Elite 3000", descr: "Lorem Ipsum Lorem Ipsum", price: 13.37, id: uuidv4()}
     , {img: worldBreaker, name: "World Breaker", descr: "Lorem Ipsum Lorem Ipsum", price: 6.66, id: uuidv4()}
+    , {img: worldBreaker, name: "World Breaker", descr: "Lorem Ipsum Lorem Ipsum", price: 6.66, id: uuidv4()}
     ]
 
 
   return (
     <div className="rootHoloStore">
       <HeaderHoloStore />
-      <div className="containerEmptyHoloStore"></div>
-      <div className="flexContainerContentHoloStore">
-        <div className="flexContainerFiltersHoloStore">
-          {/* {filters.map(filter => mkFilter(filter))} */}
-        </div>
-        <div className="flexContainerCardsHoloStore">
-          <div className="flexContainerCardsRangeHoloStore">
-            {cards.map(card => mkCard(card))}
-          </div>
-        </div>
+      <div className={
+        useIsMobile()
+        ? "gridContainerContentHoloStoreMobile" 
+        : "gridContainerContentHoloStore"
+      }>
+
+        {R.map(card => mkCard(card), cards)}
+
       </div>
     </div>
   )
@@ -76,7 +77,7 @@ const mkFilter = (infoFilter: Filter): JSX.Element => {
 const mkCard = (infoCard: Card): JSX.Element => {
 
   return (
-    <div key={infoCard.id} className="flexContainerCardHoloStore">
+    <div key={infoCard.id} className="gridCardHoloStore">
       <img src={infoCard.img} alt={infoCard.img} className="cardImgHoloStore" />
       <div className="cardNameHoloStore">{infoCard.name}</div>
       <div className="cardDescrHoloStore">{infoCard.descr}</div>

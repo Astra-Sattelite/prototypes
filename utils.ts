@@ -1,6 +1,9 @@
+import { useMediaQuery } from "react-responsive"
 import { AppDispatch, RootState } from "./src/app/store"
 import { PayloadAction } from "@reduxjs/toolkit"
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux"
+
+export const useIsMobile = (): boolean => useMediaQuery({ maxWidth: "768px" })
 
 export const useDsp = () => {
   const dispatch = useDispatch<AppDispatch>()

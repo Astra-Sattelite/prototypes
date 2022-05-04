@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../assets/scss/aveMaria/landing.scss'
-import { HeaderAve } from "../header/HeaderAve"
+import { HeaderAve } from "../headers/HeaderAve"
 
 export const AveMaria: React.FC = () => {
 

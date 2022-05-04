@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../assets/scss/holoStore/landing.scss"
-import { HeaderHoloStore } from "../header/HeaderHoloStore"
+import { HeaderHoloStore } from "../headers/HeaderHoloStore"
 import { v4 as uuidv4 } from "uuid"
 import nakirium from "../../assets/svg/holoStore/nakirium.jpeg"
 import worldBreaker from "../../assets/svg/holoStore/worldBreaker.jpeg"
@@ -52,7 +52,7 @@ export const HoloStore = () => {
       <div className="containerEmptyHoloStore"></div>
       <div className="flexContainerContentHoloStore">
         <div className="flexContainerFiltersHoloStore">
-          {filters.map(filter => mkFilter(filter))}
+          {/* {filters.map(filter => mkFilter(filter))} */}
         </div>
         <div className="flexContainerCardsHoloStore">
           <div className="flexContainerCardsRangeHoloStore">

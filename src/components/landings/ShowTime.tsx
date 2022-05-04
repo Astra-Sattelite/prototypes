@@ -6,7 +6,7 @@ import knight from "../../assets/svg/aveMaria/Knight.svg"
 import logoNihongo from "../../assets/svg/nihongo/Logo.svg"
 import logoHolo from "../../assets/svg/holoStore/Logo.svg"
 
-import { HeaderShowTime } from '../header/HeaderShowTime'
+import { HeaderShowTime } from '../headers/HeaderShowTime'
 
 import CSS from 'csstype'
 

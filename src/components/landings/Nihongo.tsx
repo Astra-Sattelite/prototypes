@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../assets/scss/nihongo/landing.scss'
-import { HeaderNihongo } from '../header/HeaderNihongo'
+import { HeaderNihongo } from '../headers/HeaderNihongo'
 
 export const Nihongo: React.FC = () => {
 

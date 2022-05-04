@@ -6,9 +6,7 @@ export const HeaderHoloStore = () => {
   return (
     <div className="flexContainerHeaderHoloStore">
       <div className="flexContainerHeaderItemsHoloStore">
-        <div className="itemHeaderHoloStore">Lorem Ipsum</div>
-        <div className="itemHeaderHoloStore">Lorem Ipsum</div>
-        <div className="itemHeaderHoloStore">Lorem Ipsum</div>
+        {/* items */}
       </div>
 
       <div className="logoHeaderHoloStore" />
@@ -18,8 +16,7 @@ export const HeaderHoloStore = () => {
           <div className="iconHeaderHoloStore" />
           <div className="cartHeaderHoloStore">Cart</div>
         </div>
-        <div className="itemHeaderHoloStore">Lorem Ipsum</div>
-        <div className="itemHeaderHoloStore">Lorem Ipsum</div>
+        {/* items */}
       </div>
     </div>
   )

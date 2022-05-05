@@ -1,6 +1,6 @@
 import React from 'react'
-import '../../assets/scss/nihongo/header.scss'
-import logo from '../../assets/svg/nihongo/Logo.svg'
+import './sass/header.sass'
+import logo from './images/Logo.svg'
 import { v4 as uuidv4 } from "uuid"
 import { Link } from "react-router-dom"
 

@@ -1,12 +1,12 @@
 import React from 'react'
-import '../../assets/scss/aveMaria/landing.scss'
-import { HeaderAve } from "../headers/HeaderAve"
+import './sass/landing.sass'
+import { HeaderAve } from "./HeaderAve"
 
 export const AveMaria: React.FC = () => {
 
   return (
     <div className="rootAve">
-      <HeaderAve />  
+      <HeaderAve />
       <div className="flexContainerLandingAve">
 
         <div className="landingImageAve" />

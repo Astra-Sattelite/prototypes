@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../../assets/scss/holoStore/header.scss"
+import "./sass/header.sass"
 
 export const HeaderHoloStore = () => {
   return (

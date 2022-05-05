@@ -1,8 +1,8 @@
 import React from "react"
-import { ShowTime } from './src/components/landings/ShowTime'
-import { Nihongo } from './src/components/landings/Nihongo'
-import { AveMaria } from './src/components/landings/AveMaria'
-import { HoloStore } from './src/components/landings/HoloStore'
+import { ShowTime } from './src/pages/ShowTime/ShowTime'
+import { Nihongo } from './src/pages/Nihongo/Nihongo'
+import { AveMaria } from './src/pages/Ave/AveMaria'
+import { HoloStore } from './src/pages/HoloStore/HoloStore'
 
 export const roots: [JSX.Element, string][] = [
   [<ShowTime />, "/"],

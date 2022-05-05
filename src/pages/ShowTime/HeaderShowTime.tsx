@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../assets/scss/showTime/header.scss'
+import './sass/header.scss'
 import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from "uuid"
 

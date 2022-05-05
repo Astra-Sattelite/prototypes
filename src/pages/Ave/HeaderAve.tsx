@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../assets/scss/aveMaria/header.scss'
+import './sass/header.sass'
 
 export const HeaderAve: React.FC = () => {
 

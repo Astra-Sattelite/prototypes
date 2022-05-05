@@ -1,12 +1,12 @@
 import React from 'react'
-import "../../assets/scss/showTime/landing.scss"
+import "./sass/landing.scss"
 import { v4 as uuidv4 } from "uuid"
 
-import knight from "../../assets/svg/aveMaria/Knight.svg"
-import logoNihongo from "../../assets/svg/nihongo/Logo.svg"
-import logoHolo from "../../assets/svg/holoStore/Logo.svg"
+import knight from "../Ave/images/Knight.svg"
+import logoNihongo from "../Nihongo/images/Logo.svg"
+import logoHolo from "../HoloStore/images/Logo.svg"
 
-import { HeaderShowTime } from '../headers/HeaderShowTime'
+import { HeaderShowTime } from './HeaderShowTime'
 
 import CSS from 'csstype'
 
@@ -68,7 +68,7 @@ const CardShowTime = (info: Info) => {
 
   return (
     <div className="cardShowTime" key={info.id}>
-      {/* <Link to={info.link} style={{width: "100%", height: "30%"}}>
+      <Link to={info.link} style={{width: "100%", height: "30%"}}>
         <div style={imageShowTime()} />
       </Link>
       <div className="cardDescrShowTime">
@@ -78,7 +78,7 @@ const CardShowTime = (info: Info) => {
         <div className="cardButtonShowTime">
           Open
         </div>
-      </Link> */}
+      </Link>
     </div>
   )
 }

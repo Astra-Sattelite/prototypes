@@ -1,10 +1,10 @@
 import React from 'react'
-import "../../assets/scss/holoStore/landing.scss"
+import "./sass/landing.sass"
 import * as R from "ramda"
-import { HeaderHoloStore } from "../headers/HeaderHoloStore"
+import { HeaderHoloStore } from "./HeaderHoloStore"
 import { v4 as uuidv4 } from "uuid"
-import nakirium from "../../assets/svg/holoStore/nakirium.jpeg"
-import worldBreaker from "../../assets/svg/holoStore/worldBreaker.jpeg"
+import nakirium from "./images/nakirium.jpeg"
+import worldBreaker from "./images/worldBreaker.jpeg"
 import { useIsMobile } from '../../../utils';
 
 interface Filter

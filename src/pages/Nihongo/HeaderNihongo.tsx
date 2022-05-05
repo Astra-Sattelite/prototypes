@@ -3,12 +3,12 @@ import './sass/header.sass'
 import logo from './images/Logo.svg'
 import { v4 as uuidv4 } from "uuid"
 import { Link } from "react-router-dom"
+import { useIsMobile } from '../../../utils'
 
 interface HeaderInfo 
   { text: string
   , link: string
   }
-
 
 export const HeaderNihongo: React.FC = () => {
 
@@ -43,7 +43,12 @@ const Links = (infos: HeaderInfo[]): JSX.Element => {
     <div className="flexContainerLinksHeaderNihongo">
       {infos.map(
         info =>
-          <Link key={uuidv4()} className="textHeaderNihongo" to={info.link}>
+          <Link key={uuidv4()} className={
+            useIsMobile() 
+              ? "textHeaderNihongoMobile" 
+              : "textHeaderNihongo"
+          } to={info.link}
+          >
             {info.text}
           </Link>
       )}

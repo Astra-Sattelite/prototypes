@@ -1,5 +1,5 @@
 import React from 'react'
-import "./sass/landing.scss"
+import "./sass/landing.sass"
 import { v4 as uuidv4 } from "uuid"
 
 import knight from "../Ave/images/Knight.svg"
@@ -14,7 +14,7 @@ import {
   Link
 } from "react-router-dom"
 
-interface Info 
+type Info =
   { img: string
   , descr: string
   , link: string
@@ -48,8 +48,11 @@ export const ShowTime = () => {
 const CardShowTime = (info: Info) => {
 
   const cardButtonLinkShowTime: CSS.Properties = {
+    display: "flex",
     width: "90%", 
-    height: "20%", 
+    height: "20%",
+    justifyContent: "center",
+    marginBottom: "5px",
     alignSelf: "center",
     textDecoration: "none", 
     color: "black"
@@ -68,7 +71,7 @@ const CardShowTime = (info: Info) => {
 
   return (
     <div className="cardShowTime" key={info.id}>
-      <Link to={info.link} style={{width: "100%", height: "30%"}}>
+      <Link to={info.link} style={{width: "100%", height: "60%"}}>
         <div style={imageShowTime()} />
       </Link>
       <div className="cardDescrShowTime">

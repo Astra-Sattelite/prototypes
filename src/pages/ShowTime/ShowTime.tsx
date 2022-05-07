@@ -1,23 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import "./sass/landing.sass"
-import axios from "axios"
 
 import * as R from "ramda"
-import { HeaderShowTime } from './HeaderShowTime'
 import CSS from 'csstype'
 import { v4 } from 'uuid'
 import { Link } from "react-router-dom"
-import { AppSelector, use } from '../../../utils'
-import { getShowTimeData, selectInfo } from './showTimeSlice';
-import { useDispatch } from 'react-redux';
+import { use } from '../../../utils'
+import { getShowTimeData, selectInfo } from './showTimeSlice'
+import { useDispatch } from 'react-redux'
 import { AppDispatch } from '../../app/store'
 
-type Info =
-  { img: string
-  , descr: string
-  , link: string
-  , id: string
-  }
+import { HeaderShowTime } from './HeaderShowTime'
 
 type InfoWithId =
   { img: string
@@ -26,7 +19,7 @@ type InfoWithId =
   , id: string
   }
 
-export const ShowTime = () => {
+const ShowTime = () => {
 
   const dispatch = useDispatch<AppDispatch>()
 
@@ -90,3 +83,5 @@ const CardShowTime: React.FC<{info: InfoWithId}> = props => {
     </div>
   )
 }
+
+export const MemoizedShowTime = React.memo(ShowTime)

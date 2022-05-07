@@ -1,7 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
+import showTimeSlice from '../pages/ShowTime/showTimeSlice';
 
 export const store = configureStore({
   reducer: {
+    showTime: showTimeSlice
   },
 })
 

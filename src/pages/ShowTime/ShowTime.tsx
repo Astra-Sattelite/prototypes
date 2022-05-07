@@ -7,6 +7,10 @@ import { HeaderShowTime } from './HeaderShowTime'
 import CSS from 'csstype'
 import { v4 } from 'uuid'
 import { Link } from "react-router-dom"
+import { AppSelector, use } from '../../../utils'
+import { getShowTimeData, selectInfo } from './showTimeSlice';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../app/store'
 
 type Info =
   { img: string
@@ -24,12 +28,13 @@ type InfoWithId =
 
 export const ShowTime = () => {
 
-  const [info, setInfo] = useState<Info[]>([])
+  const dispatch = useDispatch<AppDispatch>()
 
   useEffect(() => {
-    const req = axios.get("/static/showtime_data.json")
-      .then(resp => setInfo(resp.data.info))
+    dispatch(getShowTimeData())
   }, [])
+
+  const info = use(selectInfo)
 
   return (
     <div className="rootShowTime">

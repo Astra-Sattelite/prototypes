@@ -1,0 +1,51 @@
+{ "info": [
+      { "img": "../Ave/images/Knight.svg",
+        "descr": "We will take Jerusalem DEUS WULT! DEUS WULT! DEUS WULT!", 
+        "link": "/ave"
+      }, 
+      { "img": "../HoloStore/images/Logo.svg", 
+        "descr": "Store with hololive theme", 
+        "link": "/holo"
+      }, 
+      { "img": "../Nihongo/images/Logo.svg", 
+        "descr": "JP learning site", 
+        "link": "/ng"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
+      }
+    ]
+}

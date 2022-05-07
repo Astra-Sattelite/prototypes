@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./sass/landing.sass"
-import { v4 as uuidv4 } from "uuid"
+import axios from "axios"
 
 import knight from "../Ave/images/Knight.svg"
 import logoNihongo from "../Nihongo/images/Logo.svg"
 import logoHolo from "../HoloStore/images/Logo.svg"
 
+import { getImageUrl } from "../../../utils"
+
+import * as R from "ramda"
 import { HeaderShowTime } from './HeaderShowTime'
-
 import CSS from 'csstype'
-
-import {
-  Link
-} from "react-router-dom"
+import { v4 } from 'uuid'
+import { Link } from "react-router-dom"
 
 type Info =
   { img: string
@@ -21,31 +21,33 @@ type Info =
   , id: string
   }
 
+type InfoWithId =
+  { img: string
+  , descr: string
+  , link: string
+  , id: string
+  }
+
 export const ShowTime = () => {
 
-  const infoHash: Info[] = 
-    [ {img: ("url(" + knight + ")"), descr: 'We will take Jerusalem DEUS WULT! DEUS WULT! DEUS WULT!', link: "/ave", id: uuidv4()}
-    , {img: ("url(" + logoNihongo + ")"), descr: "Site for learning Japanese", link: "/ng", id: uuidv4()}
-    , {img: ("url(" + logoHolo + ")"), descr: "Store with hololive theme", link: "/holo", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
-    , {img: "Root", descr: "dasdasdasd", link: "/", id: uuidv4()}
-    ]
+  const [info, setInfo] = useState<Info[]>([])
+
+  useEffect(() => {
+    const req = axios.get("/static/showtime_data.json")
+      .then(resp => setInfo(resp.data.info))
+  }, [])
 
   return (
     <div className="rootShowTime">
       <HeaderShowTime />
       <div className="cardsShowTime">
-          {infoHash.map(info => CardShowTime(info))}
+        {R.map(info => <CardShowTime info={{...info, id: v4()}} key={v4()} />, info)}
       </div>
     </div>
   )
 }
 
-const CardShowTime = (info: Info) => {
+const CardShowTime: React.FC<{info: InfoWithId}> = props => {
 
   const cardButtonLinkShowTime: CSS.Properties = {
     display: "flex",
@@ -62,7 +64,7 @@ const CardShowTime = (info: Info) => {
     return {
       height: "100%",
       width: "100%",
-      backgroundImage: info.img,
+      backgroundImage: `url(${getImageUrl(props.info.img)})`,
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
       borderBottom: "1px solid black"
@@ -70,14 +72,14 @@ const CardShowTime = (info: Info) => {
   }
 
   return (
-    <div className="cardShowTime" key={info.id}>
-      <Link to={info.link} style={{width: "100%", height: "60%"}}>
+    <div className="cardShowTime" key={props.info.id}>
+      <Link to={props.info.link} style={{width: "100%", height: "60%"}}>
         <div style={imageShowTime()} />
       </Link>
       <div className="cardDescrShowTime">
-        {info.descr}
+        {props.info.descr}
       </div>
-      <Link to={info.link} style={cardButtonLinkShowTime}>
+      <Link to={props.info.link} style={cardButtonLinkShowTime}>
         <div className="cardButtonShowTime">
           Open
         </div>

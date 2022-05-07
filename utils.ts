@@ -17,3 +17,7 @@ export const use: TypedUseSelectorHook<RootState> = useSelector
 export type AppSelector<T> = (state: RootState) => T
 
 export const selector = <T>(f: AppSelector<T>): AppSelector<T> => f
+
+export const getImageUrl = (path: string) => {
+  return new URL(path, import.meta.url).href
+}

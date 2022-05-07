@@ -60,24 +60,25 @@ const CardShowTime: React.FC<{info: InfoWithId}> = props => {
     return {
       height: "100%",
       width: "100%",
+      backgroundColor: "transparent",
       backgroundImage: `url(${getImageUrl(props.info.img)})`,
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
-      borderBottom: "1px solid black"
+      backgroundSize: "contain"
     }
   }
 
   return (
     <div className="cardShowTime" key={props.info.id}>
-      <Link to={props.info.link} style={{width: "100%", height: "60%"}}>
+      <Link to={props.info.link} className="cardImageContainerShowTime">
         <div style={imageShowTime()} />
       </Link>
-      <div className="cardDescrShowTime">
+      <p className="cardDescrShowTime">
         {props.info.descr}
-      </div>
+      </p>
       <Link to={props.info.link} style={cardButtonLinkShowTime}>
         <div className="cardButtonShowTime">
-          Open
+          <p>Open</p>
         </div>
       </Link>
     </div>

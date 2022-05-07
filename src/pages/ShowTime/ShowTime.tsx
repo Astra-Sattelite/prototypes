@@ -2,12 +2,6 @@ import React, { useEffect, useState } from 'react'
 import "./sass/landing.sass"
 import axios from "axios"
 
-import knight from "../Ave/images/Knight.svg"
-import logoNihongo from "../Nihongo/images/Logo.svg"
-import logoHolo from "../HoloStore/images/Logo.svg"
-
-import { getImageUrl } from "../../../utils"
-
 import * as R from "ramda"
 import { HeaderShowTime } from './HeaderShowTime'
 import CSS from 'csstype'
@@ -58,6 +52,10 @@ const CardShowTime: React.FC<{info: InfoWithId}> = props => {
     alignSelf: "center",
     textDecoration: "none", 
     color: "black"
+  }
+
+  const getImageUrl = (path: string) => {
+    return new URL(path, import.meta.url).href
   }
 
   const imageShowTime = (): CSS.Properties => {

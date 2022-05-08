@@ -5,7 +5,8 @@ import { HeaderHoloStore } from "./HeaderHoloStore"
 import { v4 as uuidv4 } from "uuid"
 import nakirium from "./images/nakirium.jpeg"
 import worldBreaker from "./images/worldBreaker.jpeg"
-import { useMediaQuery } from 'react-responsive'
+import { use } from '../../../utils'
+import { selectWidth } from '../../appSlice';
 
 interface Filter
   { text: string
@@ -49,13 +50,13 @@ export const HoloStore = () => {
     ]
 
 
-  const useIsMobile = useMediaQuery({ query: '(max-width: 768px)' })
+    const isMobile = use(selectWidth) >= 768
 
   return (
     <div className="rootHoloStore">
       <HeaderHoloStore />
       <div className={
-        useIsMobile
+        isMobile
           ? "gridContainerContentHoloStoreMobile" 
           : "gridContainerContentHoloStore"
       }>

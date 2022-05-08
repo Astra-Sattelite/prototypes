@@ -5,7 +5,6 @@ $border-color: #b4d5f7
   flex-direction: column
   min-height: 100%
   background: url("../images/background.svg")
-  padding-bottom: 0px
 
 .rootShowTime p
   background: #9E89F8
@@ -13,16 +12,23 @@ $border-color: #b4d5f7
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
-
 .cardsShowTime 
   display: grid
   align-self: center
-  // flex-flow: row wrap
   justify-content: center
-  grid-template-columns: 1fr 1fr 1fr
+  justify-items: center
+  gap: 10px
+  padding-bottom: 50px
+  grid-template-columns: repeat(auto-fill, 300px)
   width: 70%
-  padding-bottom: 0px
 
+  &-Tablet
+    @extend .cardsShowTime
+    grid-template-columns: repeat(auto-fill, 250px)
+
+  &-Mobile
+    @extend .cardsShowTime
+    grid-template-columns: repeat(auto-fill, 250px)
 
 .cardShowTime 
   background-color: #070616
@@ -31,8 +37,18 @@ $border-color: #b4d5f7
   width: 300px
   height: 400px
   border: 2px solid $border-color
-  margin: 5%
   border-radius: 10px
+
+  &-Tablet
+    @extend .cardShowTime
+    width: 250px
+    height: 350px
+
+  &-Mobile
+    @extend .cardShowTime
+    width: 250px
+    height: 300px
+    font-size: 1rem
 
 .cardDescrShowTime 
   align-self: center

@@ -5,7 +5,7 @@ import { HeaderHoloStore } from "./HeaderHoloStore"
 import { v4 as uuidv4 } from "uuid"
 import nakirium from "./images/nakirium.jpeg"
 import worldBreaker from "./images/worldBreaker.jpeg"
-import { useIsMobile } from '../../../utils';
+import { useMediaQuery } from 'react-responsive'
 
 interface Filter
   { text: string
@@ -49,13 +49,15 @@ export const HoloStore = () => {
     ]
 
 
+  const useIsMobile = useMediaQuery({ query: '(max-width: 768px)' })
+
   return (
     <div className="rootHoloStore">
       <HeaderHoloStore />
       <div className={
-        useIsMobile()
-        ? "gridContainerContentHoloStoreMobile" 
-        : "gridContainerContentHoloStore"
+        useIsMobile
+          ? "gridContainerContentHoloStoreMobile" 
+          : "gridContainerContentHoloStore"
       }>
 
         {R.map(card => mkCard(card), cards)}

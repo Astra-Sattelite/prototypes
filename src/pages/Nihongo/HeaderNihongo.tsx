@@ -3,7 +3,8 @@ import './sass/header.sass'
 import logo from './images/Logo.svg'
 import { v4 as uuidv4 } from "uuid"
 import { Link } from "react-router-dom"
-import { useIsMobile } from '../../../utils'
+import { use } from '../../../utils'
+import { selectWidth } from '../../appSlice'
 
 interface HeaderInfo 
   { text: string
@@ -39,12 +40,14 @@ const Logo: React.FC = () => {
 
 const Links = (infos: HeaderInfo[]): JSX.Element => {
 
+  const isMobile = use(selectWidth) <= 768
+
   return (
     <div className="flexContainerLinksHeaderNihongo">
       {infos.map(
-        info =>
+        info => 
           <Link key={uuidv4()} className={
-            useIsMobile() 
+            isMobile
               ? "textHeaderNihongoMobile" 
               : "textHeaderNihongo"
           } to={info.link}

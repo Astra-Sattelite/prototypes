@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import "./sass/landing.sass"
-
 import * as R from "ramda"
 import CSS from 'csstype'
 import { v4 } from 'uuid'
 import { Link } from "react-router-dom"
-import { use } from '../../../utils'
+import { use } from '../../../utils';
 import { getShowTimeData, selectInfo } from './showTimeSlice'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from '../../app/store'
 
 import { HeaderShowTime } from './HeaderShowTime'
+import { selectWidth } from '../../appSlice'
 
 type InfoWithId =
   { img: string
@@ -29,10 +29,20 @@ const ShowTime = () => {
 
   const info = use(selectInfo)
 
+  const isMobile = use(selectWidth) <= 768
+
+  const isTablet = use(selectWidth) <= 1024
+
   return (
     <div className="rootShowTime">
       <HeaderShowTime />
-      <div className="cardsShowTime">
+      <div className={
+        isMobile
+          ? "cardsShowTime-Mobile"
+          : isTablet
+            ? "cardsShowTime-Tablet"
+            : "cardsShowTime"
+      }>
         {R.map(info => <CardShowTime info={{...info, id: v4()}} key={v4()} />, info)}
       </div>
     </div>
@@ -68,8 +78,19 @@ const CardShowTime: React.FC<{info: InfoWithId}> = props => {
     }
   }
 
+  const isMobile = use(selectWidth) <= 768
+
+  const isTablet = use(selectWidth) <= 1024
+
   return (
-    <div className="cardShowTime" key={props.info.id}>
+    <div className={
+      isMobile
+        ? "cardShowTime-Mobile"
+        : isTablet
+          ? "cardShowTime-Tablet"
+          : "cardShowTime"
+      } key={props.info.id}
+    >
       <Link to={props.info.link} className="cardImageContainerShowTime">
         <div style={imageShowTime()} />
       </Link>

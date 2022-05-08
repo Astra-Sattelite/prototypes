@@ -46,6 +46,10 @@
       { "img": "Root", 
         "descr": "Mock", 
         "link": "/"
+      }, 
+      { "img": "Root", 
+        "descr": "Mock", 
+        "link": "/"
       }
     ]
 }

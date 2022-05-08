@@ -10,17 +10,18 @@ import { throttle } from "lodash"
 
 const App: React.FC = () => {
 
-
   const dispatch = useDispatch<AppDispatch>()
 
-  const handleWindowSizeChange = () => {
+  const setWindowSizeChange = () => {
     dispatch(setWindowWidth(window.innerWidth))
   }
 
+  const throttleSetWindowSize = throttle(setWindowSizeChange, 500)
+
   useEffect(() => {
-    window.addEventListener('resize', throttle(handleWindowSizeChange, 500))
+    window.addEventListener('resize', throttleSetWindowSize)
     return () => {
-      window.removeEventListener('resize', throttle(handleWindowSizeChange, 500))
+      window.removeEventListener('resize', throttleSetWindowSize)
     }
   }, [])
 

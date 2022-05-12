@@ -27,7 +27,7 @@ export const HeaderShowTime: React.FC = () => {
 
 const HeaderButton = (info: Info): JSX.Element => {
   return (
-    <Link to={info.link} key={info.id} className="linkShowTime" style={{color: "black"}}>
+    <Link to={info.link} key={info.id} className="linkShowTime">
       {info.text}
     </Link>
   )

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./sass/landing.sass"
-import * as R from "ramda"
+import L from "lodash"
 import CSS from 'csstype'
 import { v4 } from 'uuid'
 import { Link } from "react-router-dom"
@@ -27,7 +27,9 @@ const ShowTime = () => {
     dispatch(getShowTimeData())
   }, [])
 
-  const info = use(selectInfo)
+  const infos = use(selectInfo)
+
+  const infosWithId = L.map(infos, info => ({...info, id: v4()}))
 
   const isMobile = use(selectWidth) <= 768
 
@@ -43,7 +45,7 @@ const ShowTime = () => {
             ? "cardsShowTime-Tablet"
             : "cardsShowTime"
       }>
-        {R.map(info => <CardShowTime info={{...info, id: v4()}} key={v4()} />, info)}
+        {L.map(infosWithId, info => <CardShowTime info={info} key={info.id} />)}
       </div>
     </div>
   )

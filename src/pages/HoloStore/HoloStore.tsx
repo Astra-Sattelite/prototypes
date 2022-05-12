@@ -1,19 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./sass/landing.sass"
-import * as R from "ramda"
 import { HeaderHoloStore } from "./HeaderHoloStore"
-import { v4 as uuidv4 } from "uuid"
-import nakirium from "./images/nakirium.jpeg"
-import worldBreaker from "./images/worldBreaker.jpeg"
+import { v4 } from "uuid"
 import { use } from '../../../utils'
-import { selectWidth } from '../../appSlice';
+import { selectWidth } from '../../appSlice'
+import L from "lodash"
+import { getHoloStoreProducts, selectProducts } from './holoStoreSlice'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '../../app/store'
 
-interface Filter
-  { text: string
-  , id: string
-  }
-
-interface Card
+interface CardWithId
   { img: string
   , name: string 
   , descr: string
@@ -23,72 +19,43 @@ interface Card
 
 export const HoloStore = () => {
 
-  const filters: Filter[] = 
-    [ {text: "filter by this", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    , {text: "filter by that", id: uuidv4()}
-    , {text: "filter by ww", id: uuidv4()}
-    ]
-    
-  const cards: Card[] = 
-    [ {img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPiKMvOTUvjhGPmknx4qsVAZoH0EHC66X3iA&usqp=CAU", name: "War Crime", descr: "Is it time alredy?", price: 9.99, id: uuidv4()}
-    , {img: nakirium, name: "Nakirium", descr: "Side Effects: Deabetes", price: 14.99, id: uuidv4()}
-    , {img: "https://i.ytimg.com/vi/7y5oyUbmv_8/maxresdefault.jpg", name: "Elite 3000", descr: "Lorem Ipsum Lorem Ipsum", price: 13.37, id: uuidv4()}
-    , {img: worldBreaker, name: "World Breaker", descr: "Lorem Ipsum Lorem Ipsum", price: 6.66, id: uuidv4()}
-    , {img: worldBreaker, name: "World Breaker", descr: "Lorem Ipsum Lorem Ipsum", price: 6.66, id: uuidv4()}
-    ]
+  const dispatch = useDispatch<AppDispatch>()
 
+  useEffect(() => {
+    dispatch(getHoloStoreProducts())
+  }, [])
 
-    const isMobile = use(selectWidth) >= 768
+  const cards = use(selectProducts)
+
+  const cardsWithId = L.map(cards, card => ({...card, id: v4()}))
+
+  const isMobile = use(selectWidth) <= 768
 
   return (
     <div className="rootHoloStore">
       <HeaderHoloStore />
       <div className={
         isMobile
-          ? "gridContainerContentHoloStoreMobile" 
+          ? "gridContainerContentHoloStore-Mobile" 
           : "gridContainerContentHoloStore"
       }>
-
-        {R.map(card => mkCard(card), cards)}
-
+        {L.map(cardsWithId, card => <Card card={card} key={card.id} />)}
       </div>
     </div>
   )
 }
-
-const mkFilter = (infoFilter: Filter): JSX.Element => {
-  return (
-    <div key={infoFilter.id} className="filterHoloStore">
-      <input type="checkbox" />
-      <p style={{marginLeft: "5px"}}>{infoFilter.text}</p>
-    </div>
-  )
-}
-
-const mkCard = (infoCard: Card): JSX.Element => {
+const Card: React.FC<{card: CardWithId}> = props => {
 
   return (
-    <div key={infoCard.id} className="gridCardHoloStore">
-      <img src={infoCard.img} alt={infoCard.img} className="cardImgHoloStore" />
-      <div className="cardNameHoloStore">{infoCard.name}</div>
-      <div className="cardDescrHoloStore">{infoCard.descr}</div>
+    <div className="gridCardHoloStore">
+      <img src={props.card.img} alt={props.card.img} className="cardImgHoloStore" />
+      <div className="cardNameHoloStore">{props.card.name}</div>
+      <div className="cardDescrHoloStore">{props.card.descr}</div>
       <div className="containerCardBuyHoloStore">
         <div className="cardButtonHoloStore">
           Add to Cart
         </div>
-        <div className="cardPriceHoloStore">{infoCard.price + "$"}
+        <div className="cardPriceHoloStore">{props.card.price + "$"}
         </div>
       </div>
     </div>

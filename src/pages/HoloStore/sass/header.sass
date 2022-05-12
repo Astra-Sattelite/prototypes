@@ -1,18 +1,19 @@
 $logo-size: calc(100px + 5vw)
 $logo-size-half: calc($logo-size / 2)
 
-.flexContainerHeaderHoloStore 
+.flexContainerHeaderHoloStore
   display: flex
   align-items: center
-  min-height: $logo-size
+  // min-height: $logo-size
   height: $logo-size
   width: 100%
   background-color: #FFB859
   box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25)
   z-index: 999
+  position: sticky
 
 
-.flexContainerHeaderItemsHoloStore 
+.flexContainerHeaderItemsHoloStore
   display: flex
   flex-direction: row
   width: 50%
@@ -22,7 +23,6 @@ $logo-size-half: calc($logo-size / 2)
   overflow: hidden
   &:last-child 
     flex-direction: row-reverse
-  
 
 
 .logoHeaderHoloStore 
@@ -33,15 +33,10 @@ $logo-size-half: calc($logo-size / 2)
   left: calc(50% - $logo-size-half)
   background-image: url("../images/Logo.svg")
   min-width: $logo-size
-  // width: 25vh
-  // max-width: 250px
   min-height: $logo-size
-  // height: 25vh
-  // max-height: 250px
   background-size: contain
   background-repeat: no-repeat
   background-position: center
-
 
 .itemHeaderHoloStore 
   display: flex
@@ -61,11 +56,10 @@ $logo-size-half: calc($logo-size / 2)
   border-right: 0px
   width: 15%
   height: 50%
-  background-image: url("../../svg/holoStore/Cart.svg")
+  background-image: url("../images/Cart.svg")
   background-repeat: no-repeat
   background-size: 80%
   background-position: center
-
   padding: 5px
   padding-right: 0px
 

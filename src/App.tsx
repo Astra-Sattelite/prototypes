@@ -1,12 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import { BrowserRouter as Router } from "react-router-dom"
-import * as R from "ramda"
 import { roots } from "../roots"
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from "./app/store"
 import { setWindowWidth } from "./appSlice"
-import { throttle } from "lodash"
+import L from "lodash"
 
 const App: React.FC = () => {
 
@@ -16,7 +15,7 @@ const App: React.FC = () => {
     dispatch(setWindowWidth(window.innerWidth))
   }
 
-  const throttleSetWindowSize = throttle(setWindowSizeChange, 500)
+  const throttleSetWindowSize = L.throttle(setWindowSizeChange, 500)
 
   useEffect(() => {
     window.addEventListener('resize', throttleSetWindowSize)
@@ -28,9 +27,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        {R.map(([elem, path]) =>
-          <Route path={path} element={elem} key={path} />
-          , roots
+        {L.map(
+          roots,
+          ([elem, path]) =><Route path={path} element={elem} key={path} />
         )}
       </Routes>
     </Router>

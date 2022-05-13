@@ -28,4 +28,6 @@ uuid
 vite required
 ```
 yarn && yarn dev
+
+localhost:3000
 ```

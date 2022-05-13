@@ -25,7 +25,7 @@ lodash\
 uuid
 
 # Start
-vite required\
+vite required
 ```
 yarn && yarn dev
 ```

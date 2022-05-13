@@ -41,7 +41,7 @@ export const HoloStore = () => {
     = L.orderBy(
       cardsWithId, 
       ['price'],
-      ['asc']
+      ['desc']
     )
 
   const isMobile = use(selectWidth) <= 768
@@ -70,7 +70,7 @@ const Card: React.FC<{card: CardWithId}> = props => {
       <div className="cardNameHoloStore">{props.card.name}</div>
       <div className="cardDescrHoloStore">{props.card.descr}</div>
       <div className="cardBuyHoloStore">
-        <div className="cardButtonHoloStore">
+        <div className="cardButtonHoloStore" >
           Add to Cart
         </div>
         <div className="cardPriceHoloStore">{props.card.price + "$"}
@@ -89,10 +89,10 @@ type FiltersProps = {
 const Filters: React.FC<FiltersProps> = props => {
 
   const filters: {filterBy: Filter, text: string}[] = [
-    { filterBy: "none"   , text: "Reset" },
+    { filterBy: "none"   , text: "Reset"     },
     { filterBy: "inc"    , text: "Increment" },
     { filterBy: "dec"    , text: "Decrement" },
-    { filterBy: "price"  , text: "Price" },
+    { filterBy: "price"  , text: "Price"     },
   ]
 
   return (

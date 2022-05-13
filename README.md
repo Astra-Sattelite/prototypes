@@ -1,3 +1,10 @@
+# Start
+vite required
+```
+yarn && yarn dev
+```
+localhost:3000
+
 # Screenshots
 /ng
 ![alt text](https://github.com/Astra-Sattelite/prototypes/blob/master/src/assets/screenshots/nihongo.png?raw=true)
@@ -23,10 +30,3 @@ ReduxToolkit
 # Additional Libs
 lodash\
 uuid
-
-# Start
-vite required
-```
-yarn && yarn dev
-```
-localhost:3000

@@ -5,9 +5,9 @@ export const HeaderAve: React.FC = () => {
 
   return (
     <div className="flexContainerHeaderAve">
-      <a className="textHeaderAve" href="/">
-        AVE MARIA!
-      </a>
+      <label className="textHeaderAve">
+        DESTROY THE HERETICS!
+      </label>
     </div>
   )
 }

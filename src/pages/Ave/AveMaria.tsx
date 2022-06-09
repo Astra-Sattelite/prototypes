@@ -3,6 +3,7 @@ import './sass/landing.sass'
 import { HeaderAve } from "./HeaderAve"
 import { use } from '../../../utils'
 import { selectWidth } from '../../appSlice'
+import { PurgeHereticsGame } from './PurgeHereticsGame';
 
 export const AveMaria: React.FC = () => {
 
@@ -43,7 +44,7 @@ export const AveMaria: React.FC = () => {
 
         </div>
       </div>
-      <div className='t'>some</div>
+      <PurgeHereticsGame  />
     </div>
   )
 }

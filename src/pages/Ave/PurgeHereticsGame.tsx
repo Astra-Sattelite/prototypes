@@ -52,9 +52,6 @@ export const PurgeHereticsGame: React.FC<CanvasProps> = ({ ...props }) => {
       e.key === "a" ? enemy.move(ctx, -2) : ""
     }
 
-    // window.onkeydown()
-    // move(ctx, GO.enemy)
-
   }, [])
   
 

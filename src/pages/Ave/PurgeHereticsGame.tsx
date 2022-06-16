@@ -1,22 +1,15 @@
 import React, { useRef, useEffect, KeyboardEvent } from 'react'
 
-import { Enemy } from './GameClasses'
+import { Enemy, Player } from './GameClasses'
 import "./sass/game.sass"
 import * as GO from "./GameObjects"
 
 type CanvasProps = React.DetailedHTMLProps<React.CanvasHTMLAttributes<HTMLCanvasElement>, HTMLCanvasElement>
 
+
 export const PurgeHereticsGame: React.FC<CanvasProps> = ({ ...props }) => {
 
-  const enemy = new Enemy(115, 115, 30)
-
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
-
-  const keyHandler = (e: React.KeyboardEvent) => e
-
-  // document.onkeydown = (e: ) => {}
-
-  // window.addEventListener("keydown", (e: React.KeyboardEvent<HTMLDivElement>) => {})
 
   useEffect(() => {
 
@@ -35,21 +28,33 @@ export const PurgeHereticsGame: React.FC<CanvasProps> = ({ ...props }) => {
       return
     }
 
+    const player = new Player(115, 115, 30, "blue")
+
+    const enemy = new Enemy(50, 115, 30, "red")
+
+    player.draw(ctx)
+
     enemy.draw(ctx)
 
-    const updateEnemy = () => {
-      requestAnimationFrame(updateEnemy)
-      enemy.update(ctx)
+    const update = () => {
+      requestAnimationFrame(update)
+
+      player.update(ctx)
     }
 
-    updateEnemy()
+    update()
 
     window.addEventListener("keydown", (e) => keyTracker(e))
 
     const keyTracker = (e: globalThis.KeyboardEvent) => {
       console.log("Pressed: " + e.key)
-      e.key === "d" ? enemy.move(ctx, 2) : ""
-      e.key === "a" ? enemy.move(ctx, -2) : ""
+      
+      e.key === "w" ? player.move(ctx, 0, -4) : ""
+      e.key === "a" ? player.move(ctx, -4, 0) : ""
+      e.key === "s" ? player.move(ctx, 0, 4) : ""
+      e.key === "d" ? player.move(ctx, 4, 0) : ""
+
+      // enemy.moveToPlayer(ctx, player.x - 1, player.y - 1)
     }
 
   }, [])

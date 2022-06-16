@@ -44,7 +44,7 @@ export const AveMaria: React.FC = () => {
 
         </div>
       </div>
-      <PurgeHereticsGame  />
+      {/* <PurgeHereticsGame  /> */}
     </div>
   )
 }

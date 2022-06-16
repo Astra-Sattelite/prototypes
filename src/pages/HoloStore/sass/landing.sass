@@ -1,6 +1,10 @@
 @import "./header"
 
+$text-color: black
+$border-color: #67bee4
+
 .rootHoloStore 
+  color: $text-color
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   display: flex
   flex-direction: column
@@ -37,9 +41,9 @@
   width: 200px
   height: 250px
 
-  border: 2px solid #67bee4
+  border: 2px solid $border-color
   border-radius: 5px
-  background-color: #FFB859
+  background-color: #f7b758
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
 
 
@@ -61,7 +65,7 @@
   width: 100%
   height: 10%
   font-size: 2rem
-  font-weight: 600
+  font-weight: 500
 
 
 .cardDescrHoloStore 
@@ -91,7 +95,7 @@
   font-size: 1.5rem
   width: 55%
   height: 80%
-  border: 1.5px solid #67bee4
+  border: 1.5px solid $border-color
   border-radius: 5px
   background-repeat: repeat
   background-size: contain
@@ -135,8 +139,10 @@
     margin-left: 7px
     font-size: 1.3rem
 
-.holoStoreFilterCheckbox
-  transform: scale(1.3)
-
-.holoStoreFilterText
-  margin-left: 5px
+.holoStoreFilterButton
+  border: 1px solid $border-color
+  font-size: 1.5rem
+  padding: 10px
+  border-radius: 10px
+  &:hover
+    background: #67bee4

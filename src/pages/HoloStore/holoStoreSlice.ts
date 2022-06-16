@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppSelector, selector } from '../../../utils';
 
 type Product = {
@@ -9,7 +9,10 @@ type Product = {
   price: number;
 }
 
+type Cart = [Product, number][]
+
 type State = {
+  cart: Cart
   products: Product[]
   status: "idle" | "loading" | "failed"
 }
@@ -24,6 +27,7 @@ export const getHoloStoreProducts = createAsyncThunk(
 );
 
 const initialState: State = {
+  cart: [],
   products: [],
   status: "idle"
 }
@@ -32,7 +36,9 @@ const holoStoreSlice = createSlice({
   name: "holostore",
   initialState,
   reducers: {
+    addProductToCart(state: State, action: PayloadAction<Product>) {
 
+    }
   },
   extraReducers(builder) {
     builder

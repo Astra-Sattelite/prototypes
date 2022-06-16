@@ -18,14 +18,12 @@ type CardWithId = {
 }
 
 type Filter
-  = "none"
-  | "inc"
-  | "dec"
-  | "price"
+  = "asc"
+  | "desc"
 
 export const HoloStore = () => {
 
-  const [filterBy, setFilterBy] = useState<Filter>("none")
+  const [filterBy, setFilterBy] = useState<Filter>("desc")
 
   const dispatch = useDispatch<AppDispatch>()
 
@@ -40,8 +38,8 @@ export const HoloStore = () => {
   const filteredCards 
     = L.orderBy(
       cardsWithId, 
-      ['price'],
-      ['desc']
+      ["price"],
+      [filterBy]
     )
 
   const isMobile = use(selectWidth) <= 768
@@ -89,10 +87,8 @@ type FiltersProps = {
 const Filters: React.FC<FiltersProps> = props => {
 
   const filters: {filterBy: Filter, text: string}[] = [
-    { filterBy: "none"   , text: "Reset"     },
-    { filterBy: "inc"    , text: "Increment" },
-    { filterBy: "dec"    , text: "Decrement" },
-    { filterBy: "price"  , text: "Price"     },
+    { filterBy: "asc"    , text: "Price Up"   },
+    { filterBy: "desc"   , text: "Price Down" }
   ]
 
   return (
@@ -105,8 +101,9 @@ const Filters: React.FC<FiltersProps> = props => {
               ? "holoStoreFilter-Mobile"
               : "holoStoreFilter"
           }>
-            <input type="checkbox" className="holoStoreFilterCheckbox" onChange={e => props.setFilterBy(filter.filterBy)} />
-            <div className="holoStoreFilterText">{filter.text}</div>
+            <div className="holoStoreFilterButton" onClick={e => props.setFilterBy(filter.filterBy)}>
+              {filter.text}
+            </div>
           </div>
       )}
     </div>
